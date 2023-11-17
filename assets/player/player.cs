@@ -9,6 +9,7 @@ public partial class player : CharacterBody2D
 	public int Speed { get; set; } = 400;
 
 	public string currentDire = ""; 
+	public string jumpStr = 0;
 
 
 	public override void _Input(InputEvent @event)
@@ -34,6 +35,15 @@ public partial class player : CharacterBody2D
 			currentDire = "down";
 			Trace.WriteLine(currentDire);
 		}
+
+
+		if(@event.IsActionReleased("jump"))
+		{
+
+			velocity.y += jumpStr
+
+		}
+
 
 	}
 
